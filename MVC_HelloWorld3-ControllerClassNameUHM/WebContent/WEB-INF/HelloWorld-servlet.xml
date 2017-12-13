@@ -1,0 +1,19 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+		  "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+ 
+<beans>
+
+<!-- In case of ControllerClassNameHandlerMapping -->
+
+<bean class = "org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
+
+<!-- 2nd class....CONTROLLER = in case of CCNUHM we no need to give any id to bean-->
+<bean class ="controller.HelloController"/>
+
+<!-- 3rd class... VIEW RESOLVER = must be need to configure-->
+<bean class = "org.springframework.web.servlet.view.InternalResourceViewResolver">
+				<property name="prefix" value = "/"/>
+				<property name="suffix" value = ".jsp"/>
+</bean>
+
+</beans>
